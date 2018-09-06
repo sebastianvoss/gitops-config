@@ -1,0 +1,43 @@
+---
+apiVersion: helm.integrations.flux.weave.works/v1alpha2
+kind: FluxHelmRelease
+metadata:
+  name: kube-prometheus
+  namespace: monitoring
+  labels:
+    chart: kube-prometheus
+spec:
+  chartGitPath: kube-prometheus
+  releaseName: mon
+  values:
+    global:
+      rbacEnable: true
+    alertmanager:
+      storageSpec:
+        volumeClaimTemplate:
+          spec:
+            storageClassName: gp2
+            accessModes: ["ReadWriteOnce"]
+            resources:
+              requests:
+                storage: 1Gi
+    prometheus:
+      storageSpec:
+        volumeClaimTemplate:
+          spec:
+            storageClassName: gp2
+            accessModes: ["ReadWriteOnce"]
+            resources:
+              requests:
+                storage: 1Gi
+    grafana:
+      auth:
+        anonymous:
+          enabled: "false"
+      adminPassword: "admin"
+      storageSpec:
+        class: gp2
+        accessMode: "ReadWriteOnce"
+        resources:
+          requests:
+            storage: 1Gi
