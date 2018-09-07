@@ -1,0 +1,15 @@
+---
+apiVersion: helm.integrations.flux.weave.works/v1alpha2
+kind: FluxHelmRelease
+metadata:
+  name: es-operator
+  namespace: logging
+  labels:
+    chart: es-operator
+spec:
+  chartGitPath: es-operator
+  releaseName: es-operator
+  values:
+    rbac:
+      create: true
+  
