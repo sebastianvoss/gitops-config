@@ -10,6 +10,8 @@ spec:
   chartGitPath: kube-prometheus
   releaseName: mon
   values:
+    deployKubeScheduler: False
+    deployKubeControllerManager: False
     global:
       rbacEnable: true
     alertmanager:
