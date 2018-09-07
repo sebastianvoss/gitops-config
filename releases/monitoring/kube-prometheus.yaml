@@ -22,7 +22,7 @@ spec:
             accessModes: ["ReadWriteOnce"]
             resources:
               requests:
-                storage: 1Gi
+                storage: 10Gi
     prometheus:
       storageSpec:
         volumeClaimTemplate:
@@ -31,7 +31,7 @@ spec:
             accessModes: ["ReadWriteOnce"]
             resources:
               requests:
-                storage: 1Gi
+                storage: 10Gi
     grafana:
       auth:
         anonymous:
@@ -42,4 +42,4 @@ spec:
         accessMode: "ReadWriteOnce"
         resources:
           requests:
-            storage: 1Gi
+            storage: 10Gi
