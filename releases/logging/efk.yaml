@@ -12,7 +12,7 @@ spec:
   values:
     elasticsearch:
       storage:
-        storage-class: gp2
+        storageClass: gp2
       resources:
         requests:
           memory: 1024Mi
