@@ -12,9 +12,7 @@ spec:
   values:
     elasticsearch:
       storage:
-        type: gp2
-        classProvisioner: volume.alpha.kubernetes.io/storage-class
-        reclaimPolicy: Delete
+        class: gp2
       resources:
         requests:
           memory: 1024Mi
