@@ -14,3 +14,6 @@ spec:
     image:
       repository: quay.io/coreos/prometheus-operator
       tag: v0.23.2
+    prometheusConfigReloader:
+      repository: quay.io/coreos/prometheus-config-reloader
+      tag: v0.23.2
