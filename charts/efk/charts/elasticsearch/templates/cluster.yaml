@@ -44,6 +44,7 @@ spec:
      username: {{ .Values.snapshot.authentication.username }}
 {{- end }}
   storage:
+    class: {{ .Values.storage.class }}
     type: {{ .Values.storage.type }}
     storage-class-provisioner: {{ .Values.storage.classProvisioner }}
     volume-reclaim-policy: {{ .Values.storage.reclaimPolicy }}
