@@ -22,6 +22,10 @@ spec:
           memory: 2048Mi
           cpu: '1'
     fluent-bit:
+      image:
+        fluent_bit:
+          repository: fluent/fluent-bit
+          tag: 0.14.1
       rbac:
         create: true
       filter:
@@ -40,5 +44,5 @@ spec:
             timeKeep: "On"
             decodeFieldAs: escaped log
           - name: json
-            timeKey: "@timestamp"
+            timeKey: time
             timeFormat: "%Y-%m-%dT%H:%M:%S%z"
