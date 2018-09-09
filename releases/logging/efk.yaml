@@ -13,7 +13,7 @@ spec:
     elasticsearch:
       storage:
         type: gp2
-        classProvisioner: kubernetes.io/aws-ebs
+        classProvisioner: volume.alpha.kubernetes.io/storage-class
         reclaimPolicy: Delete
       resources:
         requests:
