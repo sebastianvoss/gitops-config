@@ -1,0 +1,24 @@
+---
+apiVersion: helm.integrations.flux.weave.works/v1alpha2
+kind: FluxHelmRelease
+metadata:
+  name: efk
+  namespace: logging
+  labels:
+    chart: efk
+spec:
+  chartGitPath: efk
+  releaseName: efk
+  values:
+    elasticsearch:
+      storage:
+        type: gp2
+        classProvisioner: kubernetes.io/aws-ebs
+        reclaimPolicy: Delete
+      resources:
+        requests:
+          memory: 1024Mi
+          cpu: 200m
+        limits:
+          memory: 2048Mi
+          cpu: '1'
