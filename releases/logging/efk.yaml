@@ -23,3 +23,13 @@ spec:
     fluent-bit:
       rbac:
         create: true
+      parsers:
+        regex:
+          - name: flux
+            regex: ts=(?<ts>[^ ]*) caller=(?<caller>[^ ].*) component=(?<component>[^ ].*) (?<level>.*)="(?<msg>[^ ].*)"
+            timeKey: ts
+            timeFormat: "%Y-%m-%dT%H:%M:%S.%L%z"
+        json:
+          - name: json
+            timeKey: "@timestamp"
+            timeFormat: "%Y-%m-%dT%H:%M:%S%z"
