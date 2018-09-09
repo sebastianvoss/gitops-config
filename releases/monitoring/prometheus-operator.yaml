@@ -11,4 +11,6 @@ spec:
   releaseName: prometheus-operator
   values:
     rbacEnable: true
-  
+    image:
+      repository: quay.io/coreos/prometheus-operator
+      tag: v0.23.2
