@@ -11,6 +11,7 @@ spec:
   releaseName: efk
   values:
     elasticsearch:
+      dataVolumeSize: 10Gi
       storage:
         storageClass: gp2
       resources:
@@ -23,6 +24,9 @@ spec:
     fluent-bit:
       rbac:
         create: true
+      filter:
+        mergeJSONLog: true
+        enableParser: true
       parsers:
         regex:
           - name: flux
