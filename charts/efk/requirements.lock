@@ -1,0 +1,12 @@
+dependencies:
+- name: kibana
+  repository: https://raw.githubusercontent.com/komljen/helm-charts/master/charts/
+  version: 0.4.2
+- name: elasticsearch
+  repository: https://raw.githubusercontent.com/komljen/helm-charts/master/charts/
+  version: 0.1.4
+- name: fluent-bit
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 0.6.0
+digest: sha256:a928045f604e0b852d53c3a3cec0223b4534296b8ebb7b75b332429a6968b008
+generated: 2018-06-13T23:59:12.949106888+02:00
