@@ -14,6 +14,10 @@ spec:
     deployKubeControllerManager: False
     global:
       rbacEnable: true
+    kube_state_metrics:
+      image:
+        repository: gcr.io/google_containers/kube-state-metrics
+        tag: v1.4.0
     alertmanager:
       storageSpec:
         volumeClaimTemplate:
