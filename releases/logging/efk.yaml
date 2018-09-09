@@ -26,14 +26,14 @@ spec:
       parsers:
         regex:
           - name: flux
-            regex: ts=(?<ts>[^ ]*) caller=(?<caller>[^ ].*) component=(?<component>[^ ].*) (?<level>.*)="(?<msg>[^ ].*)"
-            timeKey: ts
+            regex: ts=(?<time>[^ ]*) caller=(?<caller>[^ ].*) component=(?<component>[^ ].*) (?<level>.*)="(?<log>[^ ].*)"
+            timeKey: time
             timeFormat: "%Y-%m-%dT%H:%M:%S.%LZ"
         json:
           - name: docker
             timeKey: time
             timeFormat: "%Y-%m-%dT%H:%M:%S.%L"
-            timeKeep: On
+            timeKeep: "On"
             decodeFieldAs: escaped log
           - name: json
             timeKey: "@timestamp"
