@@ -45,4 +45,5 @@ spec:
             timeKey: time
             timeFormat: "%Y-%m-%dT%H:%M:%S.%L"
             timeKeep: "On"
-            decodeFieldAs: "escaped log"
+            decodeFieldAs: escaped
+            decodeField: log
