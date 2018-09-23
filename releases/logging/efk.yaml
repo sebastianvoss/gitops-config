@@ -11,7 +11,7 @@ spec:
   releaseName: efk
   values:
     elasticsearch:
-      clientReplicas: 0
+      clientReplicas: 1
       masterReplicas: 1
       dataReplicas: 1
       dataVolumeSize: 10Gi
