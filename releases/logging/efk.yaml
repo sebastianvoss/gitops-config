@@ -11,7 +11,11 @@ spec:
   releaseName: efk
   values:
     elasticsearch:
+      clientReplicas: 0
+      masterReplicas: 1
+      dataReplicas: 1
       dataVolumeSize: 10Gi
+      javaOpts: "-Xms1024m -Xmx1024m"
       storage:
         storageClass: gp2
       resources:
